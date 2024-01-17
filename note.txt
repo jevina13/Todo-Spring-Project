@@ -1,0 +1,9 @@
+The command use to 
+docker run --detach --env MYSQL_ROOT_PASSWORD=password --env MYSQL_USER=user --env MYSQL_PASSWORD=dummytodos --env MYSQL_DATABASE=todos --name mysql --publish 3306:3306 mysql:8-oracle
+
+mysqlsh
+\connect todos-user@localhost:3306
+\sql
+use todos
+select * from todo;
+\quit
